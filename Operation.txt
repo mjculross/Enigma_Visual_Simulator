@@ -1,0 +1,224 @@
+Enigma Visual version 1.3 dated 02/24/2019 @1145
+   written by Mark J Culross, KD5RXT (kd5rxt@arrl.net)
+
+OPERATION:
+
+   Startup:
+      From the Enigma splash screen, tap anywhere on the touchscreen to start
+      the Enigma simulation.  The simulation begins with the standard M3 Enigma
+      (circa 1939) using reflector B, along with the standard III, II, & I
+      wheels installed, each with the rings in the default positions, with no
+      wires in the plugboard.  To change anything from the default, tap on the
+      small Enigma logo at the top-right of the display.  This will take you
+      from the Enigma operation screen to the Enigma configuration screen.
+
+   Enigma example setups:
+      The simulation allows selection from the following standard example
+      setups:
+         - Standard M3 1939
+              - Machine type:    Enigma M3 (1939)
+              - Reflector:       B
+              - Tape Groups:     5
+              - Wheels:          III II I
+              - Rings:           01 01 01
+              - Plugwires:       (none)
+         - Example M3 1930
+              - Machine type:    Enigma M3 (1939)
+              - Reflector:       A
+              - Tape Groups:     5
+              - Wheels:          II I III
+              - Rings:           24 13 22
+              - Plugwires:       AM FI NV PS TU WZ
+         - Enigma D
+              - Machine type:    Enigma D
+              - Reflector:       A
+              - Tape Groups:     5
+              - Wheels:          III II I
+              - Rings:           01 01 01 01
+              - Plugwires:       (no plugboard)
+         - Rocket K Railway
+              - Machine type:    Enigma Rocket K Railway
+              - Reflector:       A
+              - Tape Groups:     5
+              - Wheels:          III II I
+              - Rings:           01 01 01 01
+              - Plugwires:       (no plugboard)
+         - Swiss K
+              - Machine type:    Enigma Swiss K
+              - Reflector:       A
+              - Tape Groups:     5
+              - Wheels:          III II I
+              - Rings:           01 01 01 01
+              - Plugwires:       (no plugboard)
+         - Turing Rocket K 1940
+              - Machine type:    Enigma Rocket K Railway
+              - Reflector:       A
+              - Tape Groups:     5
+              - Wheels:          III I II
+              - Rings:           26 17 16 13
+              - Plugwires:       (no plugboard)
+         - Barbarosa M3 1941
+              - Machine type:    Enigma M3 (1939)
+              - Reflector:       B
+              - Tape Groups:     5
+              - Wheels:          II IV V
+              - Rings:           02 21 12
+              - Plugwires:       AV BS CG DL FU HZ IN KM OW RX
+         - Standard M4 1942
+              - Machine type:    Enigma M4 (1942)
+              - Reflector:       Thin B
+              - Tape Groups:     4
+              - Wheels:          B III II I
+              - Rings:           01 01 01 01
+              - Plugwires:       (none)
+         - U264 M4 1942
+              - Machine type:    Enigma M4 (1942)
+              - Reflector:       Thin B
+              - Tape Groups:     4
+              - Wheels:          B II IV I
+              - Rings:           01 01 01 22
+              - Plugwires:       AT BL DF GJ HM NW OP QY RZ VX
+         - Scharnhorst M3 1943
+              - Machine type:    Enigma M3 (1939)
+              - Reflector:       B
+              - Tape Groups:     5
+              - Wheels:          III VI VIII
+              - Rings:           01 08 13
+              - Plugwires:       AN EZ HK IJ LR MQ OT PV SW UX
+
+   Select the Enigma example setup:
+      To select a specific example setup from the Enigma configuration screen,
+      tap on the example setup area next to the "Quick Setup" label.  With each
+      tap, the selection indicated in the example setup area will advance
+      through the list of supported example setups.  When the desired example
+      setup is displayed, the entire configuration of that example setup can be
+      read in by tapping on the "LOAD" button to the right.  Note that tapping
+      the "LOAD" button merely loads the configuration, it does not yet make it
+      fully active.
+
+   Enigma machine types:
+      The simulation allows selection from the following Enigma Machine types:
+         - Standard model Enigma M3 (1939)
+         - Standard model Enigma M4 (1942)
+         - Business model Enigma D
+         - Enigma Rocket K Railway
+         - Enigma Swiss K
+
+   Select the Enigma machine type:
+      For manual configurations, the machine type can be changed by tapping on
+      the machine type area next to the "Machine Type" label.  With each tap,
+      the machine type indicated in the machine type area will advance through
+      the list of supported machine types.  Note that changing the machine type
+      merely changes the selection, it does not yet make it fully active.
+
+   Enigma reflector types:
+      Depending upon the Enigma machine type selected, the simulation allows
+      selection from the following reflector types:
+         - Enigma M3 reflector A
+         - Enigma M3 reflector B
+         - Enigma M3 reflector C
+         - Enigma M4 reflector thin B
+         - Enigma M4 reflector thin C
+         - Enigma D reflector A
+         - Enigma Rocket K Railway reflector A
+         - Enigma Swiss K reflector A
+
+   Select the reflector type:
+      For manual configurations, the reflector type can be changed by tapping
+      on the reflector type area next to the "Reflector" label.  With each tap,
+      the reflector type indicated in the reflector type area will advance
+      through the list of supported reflector types which are appropropriate
+      for the currently selected Enigma machine type.  Note that changing the
+      reflector type merely changes the selection, it does not yet make it
+      fully active.
+
+   Enigma tape groups:
+      The simulation allows selection from the following character groupings
+      (the number of characters grouped together, with groups separated by a
+      space on the tape display):
+         - NONE (all characters contiguous)
+         - 3 (groups of 3 characters)
+         - 4 (groups of 4 characters)
+         - 5 (groups of 5 characters)
+         - 6 (groups of 6 characters)
+
+   Select the tape groups:
+      The number of characters grouped together (or all characters contiguous)
+      on the tape display can be changed by tapping on the tape groups area
+      next to the "Tape Groups" label.  With each tap, the tape groups
+      indicated in the tape groups area will advance through the list of
+      supported tape groups selections.  Note that changing the tape groups
+      merely changes the selection, it does not yet make it fully active.
+
+   Enigma wheel types:
+      Depending upon the Enigma machine type selected, the simulation allows
+      selection from the following wheel types:
+         - Enigma M3/M4 wheel I (rightmost 3 slots)
+         - Enigma M3/M4 wheel II (rightmost 3 slots)
+         - Enigma M3/M4 wheel II (rightmost 3 slots)
+         - Enigma M3/M4 wheel IV (rightmost 3 slots)
+         - Enigma M3/M4 wheel V (rightmost 3 slots)
+         - Enigma M3/M4 wheel VI (rightmost 3 slots)
+         - Enigma M3/M4 wheel VII (rightmost 3 slots)
+         - Enigma M3/M4 wheel VIII (rightmost 3 slots)
+         - Enigma M4 wheel Beta (leftmost slot only)
+         - Enigma M4 wheel Gamma (leftmost slot only)
+         - Enigma D wheel I (rightmost 3 slots)
+         - Enigma D wheel II (rightmost 3 slots)
+         - Enigma D wheel III (rightmost 3 slots)
+         - Enigma Rocket K Railway wheel I (rightmost 3 slots)
+         - Enigma Rocket K Railway wheel II (rightmost 3 slots)
+         - Enigma Rocket K Railway wheel III (rightmost 3 slots)
+         - Enigma Swiss K wheel I (rightmost 3 slots)
+         - Enigma Swiss K wheel II (rightmost 3 slots)
+         - Enigma Swiss K wheel III (rightmost 3 slots)
+
+   Select the Enigma wheel types:
+      For manual configurations, the wheel types can be changed by tapping on
+      the specific wheel position.   With each tap, the Enigma wheel type
+      indicated in a particular Enigma wheel type area will advance through
+      the list of supported Enigma wheel types which are appropropriate for
+      the currently selected Enigma machine type.  Note that changing the
+      Enigma wheel type merely changes the selection, it does not yet make it
+      fully active.
+
+   Enigma wheel ring settings:
+      For each Enigma wheel, the alphabet ring can also be rotated with respect
+      to the natural rotor wiring.
+
+   Select the Enigma wheel ring settings:
+      The Enigma wheel ring settings can be changed by tapping on the specific
+      ring setting area associated with each Enigma wheel type.  With each tap,
+      the ring setting indicated in a particular Enigma wheel ring setting area
+      will advance through the 26 possible Enigma wheel ring rotations, where a
+      ring setting of "01" indicates the natural rotor wiring.  Note that
+      changing the Enigma wheel ring settings merely changes the selection, it
+      does not yet make it fully active.      
+
+   Enigma plugboard:
+      Depending upon the Enigma machine type selected, the simulation allows
+      selection of up to 13 plugwires on the plugboard (Stecker), although only
+      up to 10 plugwires were used in normal operation.  For each plugwire, a
+      pair of letters is selected to simulate plugging the wires in to connect
+      the letter pairs.
+
+   Enigma plugwire selection:
+      Tapping on any letter in the plugboard area will highlight that letter
+      (the first in the pair) in orange.  Tapping on the same highlighted
+      letter will cancel its selection (in case it is desired to select a
+      different letter as the first in the pair.  With one letter highlighted,
+      tapping any other letter (the second in the pair) will complete the
+      plugwire pair.  In this case, each letter will be highlighted in purple,
+      and each letter will show the other letter of the pair underneath.
+      Selecting either letter of a completed pair will cancel that plugwire.
+      Note that associating  plugwire pairs merely selects those pairs, it does
+      not yet make them fully active.
+
+   Activating configuration selections:
+      After all selections are made (Enigma example setups, as well as other
+      manual configuration selections), tapping the "ACTIVATE" button will make
+      all selections active and return to the Enigma operation screen.  On the
+      other hand, tapping the "DISCARD" button will cause all selections to be
+      abandoned and the simulation will be returned to the same configuration
+      which was active before entering the Enigma configuration screen.
+
