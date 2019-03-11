@@ -1,0 +1,191 @@
+
+ Sample Enigma messages for testing/verification ( from http://franklinheath.co.uk )
+
+
+ =======================================
+              Example 1930
+ =======================================
+ Machine   : M3
+ Reflector : A
+ Wheels    : II I III
+ Rings     : 24 13 22
+ Plugs     : AM FI NV PS TU WZ
+
+ Key       : ABL
+
+ Encrypted:
+ gcdse ahugw tqgrk vlfgx ucalx vymig
+ mmnmf dxtgn vhvrm mevou yfzsl rhdrr
+ xfjwc fhuhm unzef rdisi kbgpm yvxuz
+
+ Decrypted:
+ feind liqei nfant eriek olonn ebeob
+ aqtet xanfa ngsue dausg angba erwal
+ dexen dedre ikmos twaer tsneu stadt
+
+ German:
+ Feindliche Infanterie Kolonne beobachtet.  Anfang Sudausgang Barwalde. Ende 3km ostwarts Neustadt.
+
+ English:
+ Enemy infantry column was observed. Beginning [at] southern exit [of] Baerwald. Ending 3km east of Neustadt.
+
+ =======================================
+              Turing 1940
+ =======================================
+ Machine   : Rocket K Railway
+ Reflector : N/A
+ Wheels    :    III I II
+ Rings     : 26 17 16 13
+ Plugs     : N/A
+
+ Key       : JEZA
+
+ Encrypted:
+ qszvi dvmpn exacm rwwxu iyoty ngvvx
+ dz
+
+ Decrypted:
+ deuts qetru ppens indje tztin engla
+ nd
+
+ German:
+ Deutsche Truppen sind jetzt in England.
+
+ English:
+ German troops are now in England.
+
+
+ =======================================
+             Barbarosa 1941
+ =======================================
+ Machine   : M3
+ Reflector : B
+ Wheels    : II IV V
+ Rings     : 02 21 12
+ Plugs     : AV BS CG DL FU HZ IN KM OW RX
+
+ Key       : BLA
+
+ Encrypted:
+ edpud nrgys zrcxn uytpo mrmbo fktbz
+ rezkm lxlve fguey siozv eqmik ubpmm
+ ylklt tdeis mdica gykua ctcdo mohwx
+ muuia ubsts lrnbz szwnr fxwfy ssxjz
+ vijhi dishp rklka yupad txqsp inqma
+ tlpif svkda sctac dpbop vhjk
+
+ Decrypted:
+ aufkl xabte ilung xvonx kurti nowax
+ kurti nowax nordw estlx sebez xsebe
+ zxuaf flieg erstr aszer iqtun gxdub
+ rowki xdubr owkix opots chkax opots
+ chkax umxei nsaqt drein ullxu hrang
+ etret enxan griff xinfx rgtx
+
+ German:
+ Aufklarung abteilung von Kurtinowa Kurtinowa nordwestlich Sebez Sebez [auf]
+ Fliegerstase in Richtung Dubrowki Dubrowki, Opotschka Opotschka. Um 18:30 Uhr
+ angetreten angriff. Infanterie Regiment
+
+ English:
+ Reconnaisance division from Kurtinowa north-west of Sebech on the flight
+ corridor towards Dubrowki, Opochka. Attack begun at 18:30 hours. Infantry
+ Regiment
+
+ Key       : LSD
+
+ Encrypted:
+ sfbwd njuse gqobh krtar eezmw kpprb
+ xohdr oeqgb bgtqv pgvkb vvgbi mhusz
+ ydajq iroax sssnr ehygg rpise zbovm
+ qiemm zcysg qdgre rvbil ekxyq irgir
+ qnrdn vrxcy ytnjr
+
+ Decrypted:
+ dreig ehtla ngsam abers iqerv orwae
+ rtsxe inssi ebenn ullse qsxuh rxroe
+ mxein sxinf rgtxd reixa uffli egers
+ trasz emita nfang xeins seqsx kmxkm
+ xostw xkame necxk 
+
+ German:
+ 3 geht langsam aber sicher vorwarts. 17:06 Uhr rom eins Infanterie Regiment 3
+ auf Fliegerstase mit Anfang 16km km ostwarts Kamanec K.
+
+ English:
+ 3 goes slowly but surely forwards.  17:06 hours [Roman Numeral I] Infantry
+ Regiment 3 on the flight corridor starting 16km east of Kamanec.
+
+
+ =======================================
+               U-264 1942
+ =======================================
+ Machine   : M4
+ Reflector : Thin B
+ Wheels    : beta II IV I
+ Rings     : 01 01 01 22
+ Plugs     : AT BL DF GJ HM NW OP QY RZ VX
+
+ Key       : VJNA
+
+ Encrypted:
+ nczw vusx pnym inhz xmqx sfwx wlkj ahsh
+ nmco ccak uqpm kcsm hkse inju sblk iosx
+ ckub hmll xcsj usrr dvko hulx wccb gvli
+ yxeo ahxr hkkf vdre wezl xoba fgyu jquk
+ grtv ukam eurb veks uhhv oyha bcjw makl
+ fklm yfvn rizr vvrt kofd anjm olbg ffle
+ oprg tflv rhow opbe kvwm uqfm pwpa rmfh
+ agkx iibg
+
+ Decrypted:
+ vonv onjl ooks jhff ttte inse insd reiz
+ woyy qnns neun inha ltxx beia ngri ffun
+ terw asse rged ruec ktyw abos xlet zter
+ gegn erst andn ulac htdr einu luhr marq
+ uant onjo tane unac htse yhsd reiy zwoz
+ wonu lgra dyac htsm ysto ssen achx ekns
+ vier mbfa ellt ynnn nnno oovi erys icht
+ eins null
+
+ German:
+ Von Von 'Looks' F T 1132/19 Inhalt: Bei Angriff unter Wasser gedruckt,
+ Wasserbomben. Letzter Gegnerstandort 08:30 Uhr Marine Quadrat AJ9863, 220 Grad,
+ 8sm, stosse nach. 14mb fallt, NNO 4, Sicht 10.
+
+ English:
+ From Looks, radio-telegram 1132/19 contents: Forced to submerge under attack,
+ depth charges. Last enemy location 08:30 hours, sea square AJ9863, following 220
+ degrees, 8 knots. [Pressure] 14 millibars falling, [wind] north-north-east 4,
+ visibility 10.
+
+
+ =======================================
+            Scharnhorst 1943
+ =======================================
+ Machine   : M3
+ Reflector : B
+ Wheels    : III VI VIII
+ Rings     : 01 08 13
+ Plugs     : AN EZ HK IJ LR MQ OT PV SW UX
+
+ Key       : UZV
+
+ Encrypted:
+ ykae nzap msch zbfo cuvm rmdp ycof hadz
+ izme fxth flol pzlf ggbo tgox gret dwtj
+ iqhl mxvj wkzu astr
+
+ Decrypted:
+ steue rejta nafjo rdjan stand ortqu
+ aaacc cvier neunn eunzw ofahr tzwon
+ ulsmx xscha rnhor sthco
+
+ German:
+ Steuere Tanafjord an. Standort Quadrat AC4992, fahrt 20sm. Scharnhorst. [hco -
+ padding?]
+
+ English:
+ Heading for Tanafjord. Position is square AC4992, speed 20 knots. Scharnhorst.
+
+ End of sample Enigma messages for testing/verification
