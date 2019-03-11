@@ -222,3 +222,28 @@ OPERATION:
       abandoned and the simulation will be returned to the same configuration
       which was active before entering the Enigma configuration screen.
 
+   Enigma wheel setting:
+      From the Enigma operation screen, tapping at the bottom of any Enigma
+      wheel will advance that wheel by one letter (e.g. tapping at the bottom
+      of a wheel currently showing "G" will advance that wheel to show "H").
+      Tapping at the top of any Enigma wheel will retard that wheel by one
+      letter (e.g. tapping at the top of a wheel currently showing "G" will
+      retard that wheel to show "F"). Tapping the top or the bottom of any
+      Enigma wheel can be used to set the simulation to the starting condition
+      for the Enigma wheels.
+
+   Clearing the tape:
+      From the Enigma operation screen, tapping anywhere on the tape output
+      will clear the current tape contents.
+
+   Encrypting/decrypting messages:
+      Tapping any letter at the bottom of the Enigma operation screen will
+      cause the corresponding encrypted/decrypted letter to light in the middle
+      of the screen.  As long as the input letter is held, the corresponding
+      encrypted/decrypted letter will remain lit as well.  In addition, the
+      corresponding encrypted/decrypted letter will also be printed on the
+      tape.  And finally, as each Enigma wheel rotates, at the appropriate
+      time (depends upon the Enigma wheel type installed in any particular
+      position), the advancement of each wheel will cause the wheel to its
+      immeidate left to advance one letter for each rotation.
+
