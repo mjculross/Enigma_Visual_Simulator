@@ -58,6 +58,10 @@ CONTACT INFO:
    If you have any questions, suggestions for improvement, and most especially
       any bug reports, please contact me at kd5rxt@arrl.net.
 
+OVERVIEW VIDEO:
+   For a quick & dirty overview, see the following video:
+     https://youtu.be/8nu2KaLVWrU
+
 OPERATION:
 
    See the "Operation.txt" file for detailed operating instructions.
