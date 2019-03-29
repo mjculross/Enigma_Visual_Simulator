@@ -17,6 +17,17 @@ HARDWARE:
    This particular display provides touchscreen input & 320x240 full color
       display using the Adafruit Touch Shield V2 library.
 
+DISPLAY CALIBRATION:
+
+   The coordinates returned from the touchscreen will vary slightly from unit
+      to unit, so if you find that the point where you touch on the screen is
+      not matching the point where the Enigma Visual Simulator program
+      responds, then you should run the TFTcal_Adafruit.ino calibration sketch.
+      Doing so will help to determine the touchpad scaling constants TS_MINX,
+      TS_MINY, TS_MAXX, & TS_MAXY on-the-fly which will work best for your
+      particular hardware.  NOTE: use something small but not too sharp
+      (e.g. a toothpick) to poke the touchscreen during calibration.
+
 IMPLEMENTATION:
 
    The design of the encode/decode processing in this sketch is based upon the
