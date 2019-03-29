@@ -70,14 +70,10 @@
 // This is calibration data for the raw touch data to the screen coordinates
 // (NOTE: run the TFTcal-Adafruit.ino sketch to determine the calibration values
 //        for your specific touchscreen display)
-//const int TS_MINX = 150;
-//const int TS_MINY = 200;
-//const int TS_MAXX = 3830;
-//const int TS_MAXY = 3750;
-const int TS_MINX = 745;
-const int TS_MINY = 290;
-const int TS_MAXX = 3890;
-const int TS_MAXY = 3700;
+const int TS_MINX = 150;
+const int TS_MINY = 200;
+const int TS_MAXX = 3830;
+const int TS_MAXY = 3750;
 
 // The STMPE610 uses hardware SPI on the shield, and pin #8 for ChipSelect
 const int STMPE_CHIP_SELECT = 8;
