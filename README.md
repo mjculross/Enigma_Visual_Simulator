@@ -22,7 +22,7 @@ DISPLAY CALIBRATION:
    The coordinates returned from the touchscreen will vary slightly from unit
       to unit, so if you find that the point where you touch on the screen is
       not matching the point where the Enigma Visual Simulator program
-      responds, then you should run the TFTcal_Adafruit.ino calibration sketch.
+      responds, then you should run the TFTcal-Adafruit.ino calibration sketch.
       Doing so will help to determine the touchpad scaling constants TS_MINX,
       TS_MINY, TS_MAXX, & TS_MAXY on-the-fly which will work best for your
       particular hardware.  NOTE: use something small but not too sharp
