@@ -29,6 +29,7 @@ DISPLAY CALIBRATION:
       (e.g. a toothpick) to poke the touchscreen during calibration.
 
 TOUCH CONTROLLER TYPE:
+
    There's now a #define STMPE610_TOUCH_CONTROLLER that, when uncommented,
       provides support for older versions of the Adafruit 2.8" TFT Touch
       Shield for Arduino with Resistive Touch Screen (1651) that used the
