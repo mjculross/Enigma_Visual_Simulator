@@ -30,12 +30,13 @@ DISPLAY CALIBRATION:
 
 TOUCH CONTROLLER TYPE:
 
-   There's now a #define STMPE610_TOUCH_CONTROLLER that, when uncommented,
-      provides support for older versions of the Adafruit 2.8" TFT Touch
-      Shield for Arduino with Resistive Touch Screen (1651) that used the
-      STMPE610 touch controller.  If this define is commented out (by default),
-      then support is provided for the TSC2007 touch controller now included
-      on the newer versions of the same Adafruit product (1651).
+   There's now a #define STMPE610_TOUCH_CONTROLLER line in the source that,
+      when uncommented, provides support for older versions of the Adafruit
+      2.8" TFT Touch Shield for Arduino with Resistive Touch Screen (1651)
+      that previously used the STMPE610 touch controller.  If this define is
+      commented out (which it is by default), then support is provided for
+      the TSC2007 touch controller now included on the newer versions of the
+      same Adafruit product (1651).
       
 IMPLEMENTATION:
 
