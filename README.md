@@ -1,7 +1,7 @@
 # Enigma_Visual_Simulator
 Graphical simulation of the Enigma Machine which runs on an Arduino+Adafruit touchscreen
 
-Enigma Visual version 1.3 dated 03/10/2019 @2110
+Enigma Visual version 1.4 dated 07/23/2024 @1045
    written by Mark J Culross, KD5RXT (kd5rxt@arrl.net)
 
 HARDWARE:
@@ -28,6 +28,14 @@ DISPLAY CALIBRATION:
       particular hardware.  NOTE: use something small but not too sharp
       (e.g. a toothpick) to poke the touchscreen during calibration.
 
+TOUCH CONTROLLER TYPE:
+   There's now a #define STMPE610_TOUCH_CONTROLLER that, when uncommented,
+      provides support for older versions of the Adafruit 2.8" TFT Touch
+      Shield for Arduino with Resistive Touch Screen (1651) that used the
+      STMPE610 touch controller.  If this define is commented out (by default),
+      then support is provided for the TSC2007 touch controller now included
+      on the newer versions of the same Adafruit product (1651).
+      
 IMPLEMENTATION:
 
    The design of the encode/decode processing in this sketch is based upon the
@@ -62,7 +70,9 @@ COMPILER/LIBRARY NOTE:
       results in the loss of the otherwise available serial capabiltity for
       processing Enigma messages & the ability to display the intricate
       details of the internal mechanical operations of the Enigma machine
-      over the serial port.
+      over the serial port.  NOTE: this define is now commented out by
+      default, as the bloated libraries almost always result in exceeding
+      available program space.  Sorry !!
 
 CONTACT INFO:
 
