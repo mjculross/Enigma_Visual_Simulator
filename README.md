@@ -26,7 +26,10 @@ DISPLAY CALIBRATION:
       Doing so will help to determine the touchpad scaling constants TS_MINX,
       TS_MINY, TS_MAXX, & TS_MAXY on-the-fly which will work best for your
       particular hardware.  NOTE: use something small but not too sharp
-      (e.g. a toothpick) to poke the touchscreen during calibration.
+      (e.g. a toothpick) to poke the touchscreen during calibration.  ALSO
+      NOTE: this sketch also now includes a #define STMPE610_TOUCH_CONTROLLER
+      line in the source.  See the description for its proper use below in
+      the TOUCH CONTROLLER TYPE section.
 
 TOUCH CONTROLLER TYPE:
 
