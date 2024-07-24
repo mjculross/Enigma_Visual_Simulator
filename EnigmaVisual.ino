@@ -1,5 +1,5 @@
 //
-// Enigma Visual version 1.3 dated 03/10/2019 @2110
+// Enigma Visual version 1.4 dated 07/23/2024 @1045
 //    written by Mark J Culross, KD5RXT (kd5rxt@arrl.net)
 //
 // HARDWARE:
@@ -37,7 +37,12 @@
 //    the serial port.
 //
 
-#define SERIAL_MODE
+// uncomment the following line to enable the serial mode capability for EnigmaVisual (note the comments above about code size)
+//#define SERIAL_MODE
+
+// uncomment the following line to enable using the older displays using the STMPE610 touch controller
+// - OR - comment out the following line to enable using the newer displays using the TSC2007 touch controller
+//#define STMPE610_TOUCH_CONTROLLER
 
 //
 // The following pins are used in this project:
@@ -64,20 +69,42 @@
 #include <SPI.h>
 #include <Wire.h>            // this is needed even though we aren't using it directly
 #include <Adafruit_ILI9341.h>
-#include <Adafruit_STMPE610.h>
 #include <Adafruit_GFX.h>    // Core graphics library
+
+#ifdef STMPE610_TOUCH_CONTROLLER
+#include <Adafruit_STMPE610.h>
+#else
+#include <Adafruit_TSC2007.h>
+#endif
 
 // This is calibration data for the raw touch data to the screen coordinates
 // (NOTE: run the TFTcal-Adafruit.ino sketch to determine the calibration values
 //        for your specific touchscreen display)
-const int TS_MINX = 150;
-const int TS_MINY = 200;
-const int TS_MAXX = 3830;
-const int TS_MAXY = 3750;
+//const int TS_MINX = 150;
+//const int TS_MINY = 200;
+//const int TS_MAXX = 3830;
+//const int TS_MAXY = 3750;
 
+const int TS_MINX = 745;
+const int TS_MINY = 290;
+const int TS_MAXX = 3890;
+const int TS_MAXY = 3700;
+
+// K5YFO's hardware
+//const int TS_MINX = 267;
+//const int TS_MINY = 196;
+//const int TS_MAXX = 3870;
+//const int TS_MAXY = 3722;
+
+#ifdef STMPE610_TOUCH_CONTROLLER
 // The STMPE610 uses hardware SPI on the shield, and pin #8 for ChipSelect
 const int STMPE_CHIP_SELECT = 8;
 Adafruit_STMPE610 ts = Adafruit_STMPE610(STMPE_CHIP_SELECT);
+#else
+Adafruit_TSC2007 ts;
+
+#define TS_MIN_PRESSURE 200
+#endif
 
 // The display also uses hardware SPI, plus pin #9 as DataCommand & pin #10 as ChipSelect
 const int TFT_CHIP_SELECT = 10;
@@ -85,11 +112,11 @@ const int TFT_DATA_COMMAND = 9;
 Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CHIP_SELECT, TFT_DATA_COMMAND);
 
 // define constant display strings
-#define TITLE            F(" Visual Simulator ")
-#define VERSION0         F(" v1.3 ")
-#define VERSION1         F("written by: \n MarkCulross KD5RXT")
-#define TAPSTART         F("Tap the Enigma touchscreen to begin...")
-#define CREDIT1          F(" Many thanks to Daniel Palloks for his\n\n excellent/versatile HTML-code utility\n\n Universal Enigma Simulator v2.0 which\n\n was used to validate proper operation\n\n\n Also, thanks & credit to the authors\n\n of EnigmaSerial, whose encode/decode\n\n engine was used as a model to design\n\n my sketch's encode/decode processing")
+#define TITLE             (" Visual Simulator ")
+#define VERSION0          (" v1.4 ")
+#define VERSION1          ("written by: \n MarkCulross KD5RXT")
+#define TAPSTART          ("Tap the Enigma touchscreen to begin...")
+#define CREDIT1           (" Many thanks to Daniel Palloks for his\n\n excellent/versatile HTML-code utility\n\n Universal Enigma Simulator v2.0 which\n\n was used to validate proper operation\n\n\n Also, thanks & credit to the authors\n\n of EnigmaSerial, whose encode/decode\n\n engine was used as a model to design\n\n my sketch's encode/decode processing")
 
 // create a universal definition for the internal reference
 //    (UNO includes standard definition for INTERNAL)
@@ -894,8 +921,6 @@ void draw_display(void)
          tft.setCursor(15, 100);
          tft.print(VERSION0);
          tft.println(VERSION1);
-//         tft.setCursor(15, 120);
-//         tft.println(VERSION2);
 
          tft.setTextColor(ILI9341_CYAN);
          tft.setTextSize(1);
@@ -1520,10 +1545,10 @@ bool is_carry(byte wheelType, byte wheelPos)
 void loop()
 {
 #ifdef SERIAL_MODE
-  process_serial();
+   process_serial();
 #endif
 
-  process_buttons();
+   process_buttons();
 }  // loop()
 
 
@@ -1633,11 +1658,19 @@ void process_buttons()
    char encoded_key;
    char pressed_key;
 
+#ifdef STMPE610_TOUCH_CONTROLLER
    // See if there's any touch data for us
    if (ts.bufferEmpty())
    {
       return;
    }
+#else
+   uint16_t x, y, z1, z2;
+   if (ts.read_touch(&x, &y, &z1, &z2) && (z1 < TS_MIN_PRESSURE))
+   {
+      return;
+   }
+#endif
 
    // a point object holds x y and z coordinates.
    TS_Point p = ts.getPoint();
@@ -1659,8 +1692,12 @@ void process_buttons()
 //   tft.setCursor(145, 0);
 //   tft.println(p.y);
 
+#ifdef STMPE610_TOUCH_CONTROLLER
    // now, empty any buffered data
    while (! ts.bufferEmpty())
+#else
+   if (ts.read_touch(&x, &y, &z1, &z2) && (z1 < TS_MIN_PRESSURE))
+#endif
    {
       TS_Point p_discard = ts.getPoint();
    }
@@ -2293,6 +2330,7 @@ void process_buttons()
 
       while ((wait_for_release) && (debounce))
       {
+#ifdef STMPE610_TOUCH_CONTROLLER
          while (ts.touched())
          {
             TS_Point discard_p = ts.getPoint();
@@ -2310,9 +2348,20 @@ void process_buttons()
             {
                TS_Point p_discard = ts.getPoint();
             }
-
             debounce = false;
          }
+#else
+         uint16_t x, y, z1, z2;
+
+         // if currently being touched, then empty any buffered data
+         while (ts.read_touch(&x, &y, &z1, &z2) && (z1 > TS_MIN_PRESSURE))
+         {
+            TS_Point p_discard = ts.getPoint();
+            delay(50);
+         }
+
+         debounce = false;
+#endif
       }
 
       if (key_pressed)
