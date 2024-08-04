@@ -1,5 +1,5 @@
 //
-// Enigma Visual version 1.4 dated 07/23/2024 @1045
+// Enigma Visual version 1.5 dated 08/03/2024 @2020
 //    written by Mark J Culross, KD5RXT (kd5rxt@arrl.net)
 //
 // HARDWARE:
@@ -77,31 +77,28 @@
 #include <Adafruit_TSC2007.h>
 #endif
 
-// This is calibration data for the raw touch data to the screen coordinates
-// (NOTE: run the TFTcal-Adafruit.ino sketch to determine the calibration values
-//        for your specific touchscreen display)
-//const int TS_MINX = 150;
-//const int TS_MINY = 200;
-//const int TS_MAXX = 3830;
-//const int TS_MAXY = 3750;
-
-const int TS_MINX = 745;
-const int TS_MINY = 290;
-const int TS_MAXX = 3890;
-const int TS_MAXY = 3700;
-
-// K5YFO's hardware
-//const int TS_MINX = 267;
-//const int TS_MINY = 196;
-//const int TS_MAXX = 3870;
-//const int TS_MAXY = 3722;
-
 #ifdef STMPE610_TOUCH_CONTROLLER
-// The STMPE610 uses hardware SPI on the shield, and pin #8 for ChipSelect
-const int STMPE_CHIP_SELECT = 8;
-Adafruit_STMPE610 ts = Adafruit_STMPE610(STMPE_CHIP_SELECT);
+#include <Adafruit_STMPE610.h>
+
+// This is rough calibration data for the raw touch data to the screen coordinates for STMPE610 touch controller
+#define TS_MINX 210
+#define TS_MINY 200
+#define TS_MAXX 3860
+#define TS_MAXY 3760
+
+// The STMPE610 uses hardware SPI on the shield, and #8
+#define STMPE_CS 8
+Adafruit_STMPE610 ts = Adafruit_STMPE610(STMPE_CS);
 #else
+#include <Adafruit_TSC2007.h>
+
 Adafruit_TSC2007 ts;
+
+// This is rough calibration data for the raw touch data to the screen coordinates for TSC2007 touch controller
+#define TS_MINX 200
+#define TS_MINY 200
+#define TS_MAXX 3730
+#define TS_MAXY 3680
 
 #define TS_MIN_PRESSURE 200
 #endif
@@ -113,7 +110,7 @@ Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CHIP_SELECT, TFT_DATA_COMMAND);
 
 // define constant display strings
 #define TITLE             (" Visual Simulator ")
-#define VERSION0          (" v1.4 ")
+#define VERSION0          (" v1.5 ")
 #define VERSION1          ("written by: \n MarkCulross KD5RXT")
 #define TAPSTART          ("Tap the Enigma touchscreen to begin...")
 #define CREDIT1           (" Many thanks to Daniel Palloks for his\n\n excellent/versatile HTML-code utility\n\n Universal Enigma Simulator v2.0 which\n\n was used to validate proper operation\n\n\n Also, thanks & credit to the authors\n\n of EnigmaSerial, whose encode/decode\n\n engine was used as a model to design\n\n my sketch's encode/decode processing")
@@ -1666,7 +1663,7 @@ void process_buttons()
    }
 #else
    uint16_t x, y, z1, z2;
-   if (ts.read_touch(&x, &y, &z1, &z2) && (z1 < TS_MIN_PRESSURE))
+   if (!(ts.read_touch(&x, &y, &z1, &z2)) || (z1 < TS_MIN_PRESSURE))
    {
       return;
    }
