@@ -39,7 +39,8 @@ TOUCH CONTROLLER TYPE:
       that previously used the STMPE610 touch controller.  If this define is
       commented out (which it is by default), then support is provided for
       the TSC2007 touch controller now included on the newer versions of the
-      same Adafruit product (1651).
+      same Adafruit product (1651).  NOTE that the TFTcal_Adafruit.ino file
+      only supports calibration of the older STMPE610 touchscreen controller.
       
 IMPLEMENTATION:
 
