@@ -1,7 +1,7 @@
 # Enigma_Visual_Simulator
 Graphical simulation of the Enigma Machine which runs on an Arduino+Adafruit touchscreen
 
-Enigma Visual version 1.4 dated 07/23/2024 @1045
+Enigma Visual version 1.5 dated 08/03/2024 @2020
    written by Mark J Culross, KD5RXT (kd5rxt@arrl.net)
 
 HARDWARE:
